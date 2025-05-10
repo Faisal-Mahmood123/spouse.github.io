@@ -233,3 +233,21 @@ animation: colorChange 2s infinite;
 }
 
 
+/* image height  */
+.custom-img-height {
+  object-fit: cover;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .custom-img-height {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-img-height {
+    height: 150px;
+  }
+}
+

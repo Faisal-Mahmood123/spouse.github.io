@@ -30,6 +30,16 @@
     </div>
     <br>
     <button onclick="showLoveNote()">Click to See Your Surprise</button>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4">
+          <img src="./image/pic_three.jpg" class="img-fluid custom-img-height">
+            </div>
+            <div class="col-4"><img src="./image/mypictwo.jpg" class="img-fluid custom-img-height"></div>
+            <div class="col-2"></div>
+        </div>
+    </div>
 
     <div id="loveNote">
         <div class="scrolling-text">
@@ -88,7 +98,7 @@
     <audio id="backgroundMusic" src="./image/song.mp3" loop></audio>
 
     <script>
-function showLoveNote(){document.getElementById("loveNote").style.display="block",createHearts(),createBubbles();let e=document.getElementById("backgroundMusic");e.currentTime=0,e.play()}function createHearts(){for(let e=0;e<20;e++){let t=document.createElement("div");t.className="heart",t.style.left=`${Math.random()*window.innerWidth}px`,t.style.bottom="-20px",t.style.animationDelay=`${2*Math.random()}s`,document.body.appendChild(t)}}function createBubbles(){let e=["#66ccff","#ff6666","#66ff66","#ffcc66","#cc66ff"];for(let t=0;t<100;t++){let n=document.createElement("div");n.className="bubble",n.style.left=`${Math.random()*window.innerWidth}px`,n.style.top=`${-100*Math.random()}px`,n.style.animationDelay=`${5*Math.random()}s`,n.style.backgroundColor=e[Math.floor(Math.random()*e.length)],document.body.appendChild(n)}}document.addEventListener("DOMContentLoaded",function(){"true"!==localStorage.getItem("isLoggedIn")&&(window.location.href="index.html")}),document.getElementById("logoutBtn").addEventListener("click",function(){localStorage.removeItem("isLoggedIn"),history.replaceState(null,null,"index.html"),window.location.href="index.html"});
+        function showLoveNote() { document.getElementById("loveNote").style.display = "block", createHearts(), createBubbles(); let e = document.getElementById("backgroundMusic"); e.currentTime = 0, e.play() } function createHearts() { for (let e = 0; e < 20; e++) { let t = document.createElement("div"); t.className = "heart", t.style.left = `${Math.random() * window.innerWidth}px`, t.style.bottom = "-20px", t.style.animationDelay = `${2 * Math.random()}s`, document.body.appendChild(t) } } function createBubbles() { let e = ["#66ccff", "#ff6666", "#66ff66", "#ffcc66", "#cc66ff"]; for (let t = 0; t < 100; t++) { let n = document.createElement("div"); n.className = "bubble", n.style.left = `${Math.random() * window.innerWidth}px`, n.style.top = `${-100 * Math.random()}px`, n.style.animationDelay = `${5 * Math.random()}s`, n.style.backgroundColor = e[Math.floor(Math.random() * e.length)], document.body.appendChild(n) } } document.addEventListener("DOMContentLoaded", function () { "true" !== localStorage.getItem("isLoggedIn") && (window.location.href = "index.html") }), document.getElementById("logoutBtn").addEventListener("click", function () { localStorage.removeItem("isLoggedIn"), history.replaceState(null, null, "index.html"), window.location.href = "index.html" });
     </script>
 </body>
 
